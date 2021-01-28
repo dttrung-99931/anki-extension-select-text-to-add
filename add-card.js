@@ -4,6 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     setup();
 });
 
+chrome.runtime.onMessage.addListener(
+    function (request, sender, sendResponse) {
+        if (request.closeWindow) {
+            window.close();
+        }
+    }
+);
+
 function setup(){
     frontInput = document.getElementById('front-card-input');
     backInput = document.getElementById('back-card-input');
