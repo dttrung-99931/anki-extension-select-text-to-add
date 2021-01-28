@@ -1,0 +1,41 @@
+<style>
+    form div{
+        align-items: center; display: flex;
+    }
+    label{
+        margin-right: 10px;
+    }
+    input[type="button"]{
+        margin-left: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+</style>
+
+<h3>Add anki Card</h3>
+<form>
+    <div>
+        <label for="deck-input">Deck</label>
+        <input type="text" id="deck-input">
+    </div>
+
+    <br>
+    <div>
+        <label for="front-card-input">Front card</label>
+        <textarea name="Text1" cols="30" rows="3" id="front-card-input"></textarea>
+        <!-- <input type="text" id="front-card-input"> -->
+    </div>
+
+    <br>
+    <div>
+        <label for="back-card-input">Back card</label>
+        <textarea name="Text1" cols="30" rows="3" id="back-card-input"></textarea>
+        <!-- <input type="text" id="back-card-input"> -->
+    <div>
+        <br>
+    
+    <input type="button" value="Add" id="add-button" value="Add">
+</form>
+
+<script src="add-card.js"></script>
+<script src="anki-lib.js"></script>

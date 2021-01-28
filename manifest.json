@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Custom-anki",
+    "version": "2.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "add-card-shortcut.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "contextMenus"
+    ],
+    "background": {
+        "scripts": [
+            "anki-lib.js",
+            "context-menu.js"
+        ]
+    },
+    "browser_action": {
+        "default_popup": "popup.html"
+    }
+}
